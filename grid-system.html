@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Grid System by River Freudenrich</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        .grid-blocks {
+            width: 100%;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-flow: wrap;
+            flex-wrap: wrap;
+        }
+
+        .grid-blocks-section {
+            width: 100%;
+            position: relative;
+            color: #ce0686;
+            font-weight: 700;
+            margin-bottom: 25px !important;
+            text-align: center;
+        }
+
+        .grid-blocks-section:last-child {
+            margin-bottom: 0 !important;
+        }
+
+        .grid-block:nth-child(odd) {
+            background: white;
+        }
+
+        .grid-block:nth-child(even) {
+            background: lightgray;
+        }
+
+        .grid-block {
+            text-align: center;
+            padding: 75px 0;
+        }
+
+        .grid-block-container.grid-block-container-full .grid-blocks-section {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: block;
+            position: relative;
+        }
+
+        .grid-block-container .grid-blocks-section {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: block;
+            position: relative;
+        }
+
+        .grid-blocks-section.grid-blocks-section-full {
+            max-width: unset !important;
+        }
+
+        .title {
+            text-align: center;
+            background: #ce0686;
+            color: white;
+            padding: 50px 0 !important;
+            margin: 0 !important;
+            font-weight: 900;
+        }
+
+        .title h1 {
+            margin: 0 !important;
+            padding: 0 !important;
+            font-size: 58px;
+        }
+
+        @media (min-width:1000px) {
+            .grid-blocks.gb-full-width .grid-block {
+                width: 100%;
+            }
+
+            .grid-blocks.gb-width-2 .grid-block {
+                width: 50%;
+            }
+
+            .grid-blocks-section.grid-block-space-between .grid-blocks.gb-width-2 .grid-block {
+                width: calc(50% - 12.5px);
+            }
+
+            .grid-blocks.gb-width-3 .grid-block {
+                width: 33.3333%;
+            }
+
+            .grid-blocks-section.grid-block-space-between .grid-blocks.gb-width-3 .grid-block {
+                width: calc(33.33333% - 17.5px);
+            }
+
+            .grid-blocks.gb-width-4 .grid-block {
+                width: 25%;
+            }
+
+            .grid-blocks-section.grid-block-space-between .grid-blocks.gb-width-4 .grid-block {
+                width: calc(25% - 20px);
+            }
+
+            .grid-blocks.gb-width-5 .grid-block {
+                width: 20%;
+            }
+
+            .grid-blocks.gb-width-6 .grid-block {
+                width: 16.666667%;
+            }
+
+            .grid-blocks.gb-width-7 .grid-block {
+                width: 14.285%;
+            }
+
+            .grid-blocks.gb-width-8 .grid-block {
+                width: 12.5%;
+            }
+        }
+
+        @media (max-width:1000px) {
+            .grid-blocks.gb-full-width .grid-block {
+                width: 100%;
+            }
+
+            .grid-blocks.gb-width-2 .grid-block {
+                width: 100%;
+            }
+
+            .grid-blocks.gb-width-3 .grid-block {
+                width: 100%;
+            }
+
+            .grid-blocks.gb-width-4 .grid-block {
+                width: 50%;
+            }
+
+            .grid-blocks.gb-width-5 .grid-block {
+                width: 50%;
+            }
+
+            .grid-blocks.gb-width-6 .grid-block {
+                width: 33.3333333%;
+            }
+
+            .grid-blocks.gb-width-7 .grid-block {
+                width: 33.3333333%;
+            }
+
+            .grid-blocks.gb-width-8 .grid-block {
+                width: 25%;
+            }
+
+            .grid-blocks-section {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        @media (max-width:768px) {
+            .grid-blocks .grid-block {
+                width: 100% !important;
+            }
+
+            .grid-blocks.gb-width-5 .grid-block {
+                width: 50% !important;
+            }
+
+            .grid-blocks.gb-width-6 .grid-block {
+                width: 50% !important;
+            }
+
+            .grid-blocks.gb-width-7 .grid-block {
+                width: 50% !important;
+            }
+
+            .grid-blocks.gb-width-8 .grid-block {
+                width: 50% !important;
+            }
+
+            .grid-blocks-section {
+                margin-bottom: 0 !important;
+            }
+        }
+    </style>
+</head>
+
+<body style="margin: 0;padding:0;font-family: 'Poppins', sans-serif;font-size:21px;">
+
+    <!-- Title Only -->
+    <div class="title">
+        <h1>Container</h1>
+    </div>
+
+    <!-- Container -->
+    <div class="grid-block-container" style="background: #ce0686;">
+
+        <!-- Block 1 -->
+        <div class="grid-blocks-section">
+            <div class="grid-blocks gb-full-width">
+                <div class="grid-block">Full</div>
+            </div>
+        </div>
+
+        <!-- Block 2 -->
+        <div class="grid-blocks-section">
+            <div class="grid-blocks gb-width-2">
+                <div class="grid-block">1/2</div>
+                <div class="grid-block">2/2</div>
+            </div>
+        </div>
+
+        <!-- Block 3 -->
+        <div class="grid-blocks-section">
+            <div class="grid-blocks gb-width-3">
+                <div class="grid-block">1/3</div>
+                <div class="grid-block">2/3</div>
+                <div class="grid-block">3/3</div>
+            </div>
+        </div>
+
+        <!-- Block 4 -->
+        <div class="grid-blocks-section">
+            <div class="grid-blocks gb-width-4">
+                <div class="grid-block">1/4</div>
+                <div class="grid-block">2/4</div>
+                <div class="grid-block">3/4</div>
+                <div class="grid-block">4/4</div>
+            </div>
+        </div>
+
+        <!-- Block 5 -->
+        <div class="grid-blocks-section">
+            <div class="grid-blocks gb-width-5">
+                <div class="grid-block">1/5</div>
+                <div class="grid-block">2/5</div>
+                <div class="grid-block">3/5</div>
+                <div class="grid-block">4/5</div>
+                <div class="grid-block">5/5</div>
+            </div>
+        </div>
+
+        <!-- Block 6 -->
+        <div class="grid-blocks-section">
+            <div class="grid-blocks gb-width-6">
+                <div class="grid-block">1/6</div>
+                <div class="grid-block">2/6</div>
+                <div class="grid-block">3/6</div>
+                <div class="grid-block">4/6</div>
+                <div class="grid-block">5/6</div>
+                <div class="grid-block">6/6</div>
+            </div>
+        </div>
+
+        <!-- Block 7 -->
+        <div class="grid-blocks-section">
+            <div class="grid-blocks gb-width-7">
+                <div class="grid-block">1/7</div>
+                <div class="grid-block">2/7</div>
+                <div class="grid-block">3/7</div>
+                <div class="grid-block">4/7</div>
+                <div class="grid-block">5/7</div>
+                <div class="grid-block">6/7</div>
+                <div class="grid-block">7/7</div>
+            </div>
+        </div>
+
+        <!-- Block 8 -->
+        <div class="grid-blocks-section">
+            <div class="grid-blocks gb-width-8">
+                <div class="grid-block">1/8</div>
+                <div class="grid-block">2/8</div>
+                <div class="grid-block">3/8</div>
+                <div class="grid-block">4/8</div>
+                <div class="grid-block">5/8</div>
+                <div class="grid-block">6/8</div>
+                <div class="grid-block">7/8</div>
+                <div class="grid-block">8/8</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Title Only -->
+    <div class="title">
+        <h1>Full Width Container</h1>
+    </div>
+
+    <!-- Full Width Container -->
+    <div class="grid-block-container grid-block-container-full" style="background: #ce0686;">
+
+        <!-- Block 1 -->
+        <div class="grid-blocks-section">
+            <div class="grid-blocks gb-full-width">
+                <div class="grid-block">Full</div>
+            </div>
+        </div>
+
+        <!-- Block 2 -->
+        <div class="grid-blocks-section">
+            <div class="grid-blocks gb-width-2">
+                <div class="grid-block">1/2</div>
+                <div class="grid-block">2/2</div>
+            </div>
+        </div>
+
+        <!-- Block 3 -->
+        <div class="grid-blocks-section">
+            <div class="grid-blocks gb-width-3">
+                <div class="grid-block">1/3</div>
+                <div class="grid-block">2/3</div>
+                <div class="grid-block">3/3</div>
+            </div>
+        </div>
+
+        <!-- Block 4 -->
+        <div class="grid-blocks-section grid-blocks-section-full">
+            <div class="grid-blocks gb-width-4">
+                <div class="grid-block">1/4</div>
+                <div class="grid-block">2/4</div>
+                <div class="grid-block">3/4</div>
+                <div class="grid-block">4/4</div>
+            </div>
+        </div>
+
+        <!-- Block 5 -->
+        <div class="grid-blocks-section grid-blocks-section-full">
+            <div class="grid-blocks gb-width-5">
+                <div class="grid-block">1/5</div>
+                <div class="grid-block">2/5</div>
+                <div class="grid-block">3/5</div>
+                <div class="grid-block">4/5</div>
+                <div class="grid-block">5/5</div>
+            </div>
+        </div>
+
+        <!-- Block 2 -->
+        <div class="grid-blocks-section">
+            <div class="grid-blocks gb-width-2">
+                <div class="grid-block">1/2</div>
+                <div class="grid-block">2/2</div>
+            </div>
+        </div>
+
+        <!-- Block 3 -->
+        <div class="grid-blocks-section">
+            <div class="grid-blocks gb-width-3">
+                <div class="grid-block">1/3</div>
+                <div class="grid-block">2/3</div>
+                <div class="grid-block">3/3</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Title Only -->
+    <div class="title">
+        <h1>Space Between</h1>
+    </div>
+
+    <!-- Container -->
+    <div class="grid-block-container" style="background: #ce0686;">
+
+        <!-- Block 1 -->
+        <div class="grid-blocks-section">
+            <div class="grid-blocks gb-full-width">
+                <div class="grid-block">Full</div>
+            </div>
+        </div>
+
+        <!-- Block 2 -->
+        <div class="grid-blocks-section grid-block-space-between">
+            <div class="grid-blocks gb-width-2">
+                <div class="grid-block">1/2</div>
+                <div class="grid-block">2/2</div>
+            </div>
+        </div>
+
+        <!-- Block 3 -->
+        <div class="grid-blocks-section grid-block-space-between">
+            <div class="grid-blocks gb-width-3">
+                <div class="grid-block">1/3</div>
+                <div class="grid-block">2/3</div>
+                <div class="grid-block">3/3</div>
+            </div>
+        </div>
+
+        <!-- Block 1 -->
+        <div class="grid-blocks-section">
+            <div class="grid-blocks gb-full-width">
+                <div class="grid-block">Full</div>
+            </div>
+        </div>
+
+        <!-- Block 4 -->
+        <div class="grid-blocks-section grid-block-space-between">
+            <div class="grid-blocks gb-width-4">
+                <div class="grid-block">1/4</div>
+                <div class="grid-block">2/4</div>
+                <div class="grid-block">3/4</div>
+                <div class="grid-block">4/4</div>
+            </div>
+        </div>
+
+        <!-- Block 2 -->
+        <div class="grid-blocks-section grid-block-space-between">
+            <div class="grid-blocks gb-width-2">
+                <div class="grid-block">1/2</div>
+                <div class="grid-block">2/2</div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Title Only -->
+    <div class="title">
+        <h1>Full Width Space Between</h1>
+    </div>
+
+    <!-- Full Width Container -->
+    <div class="grid-block-container grid-block-container-full" style="background: #ce0686;">
+
+        <!-- Block 1 -->
+        <div class="grid-blocks-section">
+            <div class="grid-blocks gb-full-width">
+                <div class="grid-block">Full</div>
+            </div>
+        </div>
+
+        <!-- Block 2 -->
+        <div class="grid-blocks-section grid-block-space-between">
+            <div class="grid-blocks gb-width-2">
+                <div class="grid-block">1/2</div>
+                <div class="grid-block">2/2</div>
+            </div>
+        </div>
+
+        <!-- Block 3 -->
+        <div class="grid-blocks-section grid-block-space-between">
+            <div class="grid-blocks gb-width-3">
+                <div class="grid-block">1/3</div>
+                <div class="grid-block">2/3</div>
+                <div class="grid-block">3/3</div>
+            </div>
+        </div>
+
+        <!-- Block 4 -->
+        <div class="grid-blocks-section grid-blocks-section-full grid-block-space-between">
+            <div class="grid-blocks gb-width-4">
+                <div class="grid-block">1/4</div>
+                <div class="grid-block">2/4</div>
+                <div class="grid-block">3/4</div>
+                <div class="grid-block">4/4</div>
+            </div>
+        </div>
+
+        <!-- Block 4 -->
+        <div class="grid-blocks-section grid-blocks-section-full grid-block-space-between">
+            <div class="grid-blocks gb-width-4">
+                <div class="grid-block">1/4</div>
+                <div class="grid-block">2/4</div>
+                <div class="grid-block">3/4</div>
+                <div class="grid-block">4/4</div>
+            </div>
+        </div>
+
+        <!-- Block 2 -->
+        <div class="grid-blocks-section grid-block-space-between">
+            <div class="grid-blocks gb-width-2">
+                <div class="grid-block">1/2</div>
+                <div class="grid-block">2/2</div>
+            </div>
+        </div>
+
+        <!-- Block 2 -->
+        <div class="grid-blocks-section grid-block-space-between">
+            <div class="grid-blocks gb-width-2">
+                <div class="grid-block">1/2</div>
+                <div class="grid-block">2/2</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
