@@ -123,6 +123,22 @@
             .grid-blocks.gb-width-8 .grid-block {
                 width: 12.5%;
             }
+
+            .grid-blocks.grid-column-count {
+                display: block;
+                position: relative;
+                float: none;
+                column-count: 4;
+                column-gap: 0;
+            }
+
+            .grid-blocks.grid-column-count.column-count-4 {
+                column-count: 2;
+            }
+
+            .grid-blocks.grid-column-count.column-count-6 {
+                column-count: 3;
+            }
         }
 
         @media (max-width:1000px) {
@@ -161,6 +177,22 @@
             .grid-blocks-section {
                 margin-bottom: 0 !important;
             }
+
+            .grid-blocks.grid-column-count {
+                display: block;
+                position: relative;
+                float: none;
+                column-count: 2;
+                column-gap: 0;
+            }
+
+            .grid-blocks.grid-column-count.column-count-4 {
+                column-count: 2;
+            }
+
+            .grid-blocks.grid-column-count.column-count-6 {
+                column-count: 2;
+            }
         }
 
         @media (max-width:768px) {
@@ -187,11 +219,27 @@
             .grid-blocks-section {
                 margin-bottom: 0 !important;
             }
+
+            .grid-blocks.grid-column-count {
+                display: block;
+                position: relative;
+                float: none;
+                column-count: 2;
+                column-gap: 0;
+            }
+
+            .grid-blocks.grid-column-count.column-count-6 {
+                column-count: 2;
+            }
+
+            .grid-blocks.grid-column-count.column-count-4 {
+                column-count: 1;
+            }
         }
 
         .grid-blocks-section.grid-gallery-section {
             margin-bottom: 0 !important;
-            background:white;
+            background: white;
         }
 
         .grid-blocks.gb-full-width.gb-photo-hero .grid-block {
@@ -205,10 +253,10 @@
         }
 
         @media (max-width: 500px) {
-          .grid-blocks-section.grid-gallery-section .gb-width-4 .grid-block {
-              width:50% !important;
-              min-height: 150px !important;
-          }
+            .grid-blocks-section.grid-gallery-section .gb-width-4 .grid-block {
+                width: 50% !important;
+                min-height: 150px !important;
+            }
         }
 
         .grid-blocks-section.grid-gallery-section .grid-block:hover {
@@ -535,7 +583,7 @@
         <!-- Block 1 -->
         <div class="grid-blocks-section grid-gallery-section">
             <div class="grid-blocks gb-full-width gb-photo-hero">
-              <div class="grid-block" style="background-image:url(https://via.placeholder.com/2000x1000);background-size:cover;background-position:50% 50%;"></div>
+                <div class="grid-block" style="background-image:url(https://via.placeholder.com/2000x1000);background-size:cover;background-position:50% 50%;"></div>
             </div>
         </div>
 
@@ -566,6 +614,52 @@
                 <div class="grid-block" style="background-image:url(https://via.placeholder.com/1000x1000);background-size:cover;background-position:50% 50%;"></div>
                 <div class="grid-block" style="background-image:url(https://via.placeholder.com/1000x1000);background-size:cover;background-position:50% 50%;"></div>
                 <div class="grid-block" style="background-image:url(https://via.placeholder.com/1000x1000);background-size:cover;background-position:50% 50%;"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Title Only -->
+    <div class="title">
+        <h1>Column Count</h1>
+    </div>
+
+    <!-- Container -->
+    <div class="grid-block-container" style="background: #ce0686;">
+
+        <!-- Block 8 -->
+        <div class="grid-blocks-section">
+            <div class="grid-blocks grid-column-count column-count-4">
+                <div class="grid-block">1/4</div>
+                <div class="grid-block">2/4</div>
+                <div class="grid-block">3/4</div>
+                <div class="grid-block">4/4</div>
+            </div>
+        </div>
+
+        <!-- Block 8 -->
+        <div class="grid-blocks-section">
+            <div class="grid-blocks grid-column-count column-count-6">
+                <div class="grid-block">1/6</div>
+                <div class="grid-block">2/6</div>
+                <div class="grid-block">3/6</div>
+                <div class="grid-block">4/6</div>
+                <div class="grid-block">5/6</div>
+                <div class="grid-block">6/6</div>
+            </div>
+        </div>
+
+        <!-- Block 8 -->
+        <div class="grid-blocks-section">
+            <div class="grid-blocks grid-column-count column-count-8">
+                <div class="grid-block">1/8</div>
+                <div class="grid-block">2/8</div>
+                <div class="grid-block">3/8</div>
+                <div class="grid-block">4/8</div>
+                <div class="grid-block">5/8</div>
+                <div class="grid-block">6/8</div>
+                <div class="grid-block">7/8</div>
+                <div class="grid-block">8/8</div>
             </div>
         </div>
 
