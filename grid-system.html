@@ -186,6 +186,41 @@
                 margin-bottom: 0 !important;
             }
         }
+
+        .grid-blocks-section.grid-gallery-section {
+            margin-bottom: 0 !important;
+            background:white;
+        }
+
+        .grid-blocks.gb-full-width.gb-photo-hero .grid-block {
+            min-height: 500px;
+            padding: 0;
+        }
+
+        .grid-blocks-section.grid-gallery-section .grid-block {
+            min-height: 250px;
+            padding: 0;
+        }
+
+        @media (max-width: 500px) {
+          .grid-blocks-section.grid-gallery-section .gb-width-4 .grid-block {
+              width:50% !important;
+              min-height: 150px !important;
+          }
+        }
+
+        .grid-blocks-section.grid-gallery-section .grid-block:hover {
+            opacity: .9;
+            box-shadow: rgb(0 0 0 / 20%) 0px 20px 30px;
+            z-index: 999999;
+            position: relative;
+            transition: .4s ease;
+        }
+
+        .grid-blocks.gb-full-width.gb-photo-hero .grid-block:hover {
+            box-shadow: none;
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -482,6 +517,53 @@
             <div class="grid-blocks gb-width-2">
                 <div class="grid-block">1/2</div>
                 <div class="grid-block">2/2</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Title Only -->
+    <div class="title">
+        <h1>Photo Gallery</h1>
+    </div>
+
+    <!-- Container -->
+    <div class="grid-block-container grid-gallery" style="background: #ce0686;">
+
+        <!-- Block 1 -->
+        <div class="grid-blocks-section grid-gallery-section">
+            <div class="grid-blocks gb-full-width gb-photo-hero">
+              <div class="grid-block" style="background-image:url(https://via.placeholder.com/2000x1000);background-size:cover;background-position:50% 50%;"></div>
+            </div>
+        </div>
+
+        <!-- Block 4 -->
+        <div class="grid-blocks-section grid-gallery-section">
+            <div class="grid-blocks gb-width-4">
+                <div class="grid-block" style="background-image:url(https://via.placeholder.com/1000x1000);background-size:cover;background-position:50% 50%;"></div>
+                <div class="grid-block" style="background-image:url(https://via.placeholder.com/1000x1000);background-size:cover;background-position:50% 50%;"></div>
+                <div class="grid-block" style="background-image:url(https://via.placeholder.com/1000x1000);background-size:cover;background-position:50% 50%;"></div>
+                <div class="grid-block" style="background-image:url(https://via.placeholder.com/1000x1000);background-size:cover;background-position:50% 50%;"></div>
+            </div>
+        </div>
+
+        <!-- Block 4 -->
+        <div class="grid-blocks-section grid-gallery-section">
+            <div class="grid-blocks gb-width-4">
+                <div class="grid-block" style="background-image:url(https://via.placeholder.com/1000x1000);background-size:cover;background-position:50% 50%;"></div>
+                <div class="grid-block" style="background-image:url(https://via.placeholder.com/1000x1000);background-size:cover;background-position:50% 50%;"></div>
+                <div class="grid-block" style="background-image:url(https://via.placeholder.com/1000x1000);background-size:cover;background-position:50% 50%;"></div>
+                <div class="grid-block" style="background-image:url(https://via.placeholder.com/1000x1000);background-size:cover;background-position:50% 50%;"></div>
+            </div>
+        </div>
+
+        <!-- Block 4 -->
+        <div class="grid-blocks-section grid-gallery-section">
+            <div class="grid-blocks gb-width-4">
+                <div class="grid-block" style="background-image:url(https://via.placeholder.com/1000x1000);background-size:cover;background-position:50% 50%;"></div>
+                <div class="grid-block" style="background-image:url(https://via.placeholder.com/1000x1000);background-size:cover;background-position:50% 50%;"></div>
+                <div class="grid-block" style="background-image:url(https://via.placeholder.com/1000x1000);background-size:cover;background-position:50% 50%;"></div>
+                <div class="grid-block" style="background-image:url(https://via.placeholder.com/1000x1000);background-size:cover;background-position:50% 50%;"></div>
             </div>
         </div>
 
